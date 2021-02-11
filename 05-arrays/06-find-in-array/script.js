@@ -81,10 +81,11 @@
     // your code here
 
     var cpt = 0;
+    var index = 0;
 
     function getMail(cpt) {
         if(cpt['firstname'] == "Jean" && cpt['lastname'] == "Dupont") {
-            console.log(cpt['email']);
+            console.log(cpt['email'], people.indexOf(cpt));
         }
     }
 

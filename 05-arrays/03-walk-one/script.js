@@ -19,7 +19,7 @@
 
     document.getElementById("run").addEventListener("click", function() {
         for (let i = 0; i < fruits.length; i++) {
-            alert(fruits[i]);
+            console.log(fruits[i]);
         }
     })
 
