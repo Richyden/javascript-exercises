@@ -19,7 +19,7 @@
     document.getElementById("run").addEventListener("click", function() {
 
         fruits.delete("apple");
-        fruits.delete("cerise");
+        fruits.delete("cherry");
 
         fruits.add("banana");
         fruits.add("kiwi");

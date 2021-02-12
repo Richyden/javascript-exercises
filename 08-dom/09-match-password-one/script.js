@@ -6,11 +6,11 @@
     var password_verif = document.getElementById("pass-two").value;
 
     document.getElementById("run").addEventListener("click", function() {
-        if (password !== password_verif) {
+        if (password_verif !== password) {
             document.getElementById("pass-one").style.borderColor = "red";
             document.getElementById("pass-two").style.borderColor = "red";
         }
-        else if (password === password_verif) {
+        else if (password_verif === password) {
             document.getElementById("pass-one").style.borderColor = "green";
             document.getElementById("pass-two").style.borderColor = "green";
         }

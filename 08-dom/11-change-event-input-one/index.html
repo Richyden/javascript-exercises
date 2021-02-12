@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>BeCode/JavaScript - 6.10: password verification (2)</title>
+    <title>BeCode/JavaScript - 6.11: change event (1)</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="../../_shared/css/normalize.css" />
@@ -15,28 +15,21 @@
         <header>
             <h1>BeCode / JavaScript</h1>
             <h2>
-                <span>8.10</span>
-                <strong>password verification (2)</strong>
+                <span>8.11</span>
+                <strong>change event (1)</strong>
             </h2>
         </header>
         <div class="content">
             <section class="explain">
-                <p>When you click the button, check whether the two passwords entered in the input fields are
-                    <em>exactly</em>the same. If they are not, add the class "error" to the input boxes.</p>
-                </p>
+                <p>Listen for changes in the input field and display the number of characters entered in the counter
+                    span. As soon as 10 characters have been entered, don't allow any more characters to be typed.</p>
             </section>
             <section class="material">
                 <form action="#" method="post">
-                    <div class="field">
+                    <div class="field with-indicator">
                         <label for="pass-one">Password:</label>
                         <input type="text" name="pass-one" id="pass-one" />
-                    </div>
-                    <div class="field">
-                        <label for="pass-two">Re-enter password:</label>
-                        <input type="text" name="pass-two" id="pass-two" />
-                    </div>
-                    <div class="actions">
-                        <button type="button" id="run">Run the script</button>
+                        <span id="counter" class="indicator">0/10</span>
                     </div>
                 </form>
             </section>
