@@ -1,11 +1,14 @@
-(function() {
+(function () {
 
     // your code here
+    let baseImage = document.querySelector('img');
+    let image1 = baseImage.getAttribute('src');
+    let image2 = baseImage.getAttribute('data-hover');
 
-    const image = document.querySelector("img");
-    const hover = image.getAttribute("data-hover").value;
-
-    image.addEventListener("mouseover", () => {
-        image.src = hover;
+    baseImage.addEventListener('mouseover', () => {
+        baseImage.setAttribute('src', image2)
+    });
+    baseImage.addEventListener('mouseout', () => {
+        baseImage.setAttribute('src', image1)
     });
 })();
