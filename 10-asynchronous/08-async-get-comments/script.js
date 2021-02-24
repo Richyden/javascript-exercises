@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener('click', function() {
+
+        async function async_test() {  //bloc l'execution du code asynchrone jusqu'à ce quil retourne un résultat
+
+            const posts = await window.lib.getPosts(); //attend les résultats de la fonction
+            console.log(posts);
+        }
+
+        async_test(); // appel de la fonction.
+    })
 })();

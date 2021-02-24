@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+
+    //Quand j'appuie sur le bouton, lance le résolve de la fonction promise qui se trouve dans la fonction getPosts().
+
+    document.getElementById("run").addEventListener("click", function() {
+        window.lib.getPosts().then(function getPosts(array) {  //.then(), pour exécuter du code dès que la promise est résolue.
+            console.log(array);
+        })
+    });
 })();
