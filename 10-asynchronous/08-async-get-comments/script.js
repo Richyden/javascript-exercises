@@ -18,6 +18,14 @@
 
             const posts = await window.lib.getPosts(); //attend les résultats de la fonction
             console.log(posts);
+
+            posts.forEach((element) => {
+                async function comments() {
+                    const comments = await window.lib.getComments();
+                    element.comments = comments;
+                }
+                comments();
+            })
         }
 
         async_test(); // appel de la fonction.

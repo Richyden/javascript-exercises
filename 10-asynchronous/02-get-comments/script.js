@@ -12,23 +12,16 @@
 (() => {
     // your code here
 
-    function comments(id) {
-
-        function callback(error, array) {
-            console.log(error);
-            console.log(array);
-        }
-
-        window.lib.getComments(id, callback);
-    }
-
-    function callback(error, array) {
-        console.log(error);
-        console.log(array);
-    }
-
     document.getElementById("run").addEventListener("click", function() {
-        window.lib.getPosts(callback);
-        window.lib.getComments(comments);
+
+        window.lib.getPosts(function target_posts(error, array) {
+            array.forEach(function target_comments(element) {
+                window.lib.getComments(element.id, (error, comments) => {
+                    element.comments = comments;
+                })
+            })
+
+            console.log(array);
+        })
     })
 })();

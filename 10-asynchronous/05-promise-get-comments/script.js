@@ -15,11 +15,8 @@
     document.getElementById('run').addEventListener('click', function() {
 
         window.lib.getPosts().then(function getPosts(array){
-
             array.forEach(function testComments(element) {
-
                 window.lib.getComments().then(element.id, (error, comments) => {
-
                     element.comments = comments;
                     console.log(comments);
                 })
