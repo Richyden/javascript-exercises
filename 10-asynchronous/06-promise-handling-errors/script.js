@@ -19,5 +19,7 @@
         }).catch((error) => { //si cele échoue
             console.error(error);
         });
+
     })
+    
 })();
